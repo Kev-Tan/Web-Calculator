@@ -1,1 +1,1 @@
-Simple web-based calculator project meant based on the Odin Project
+A simple web-based calculator created using Vanilla JS, HTML, and CSS for practicing

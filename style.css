@@ -6,10 +6,16 @@
 
 body {
   display: flex;
+  flex-direction: column;
+  gap: 40px;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
+}
+
+h1 {
+  font-family: "Georgia", serif;
 }
 
 main {
@@ -20,6 +26,7 @@ main {
   background-color: #272b27;
   display: block;
   margin: 0 auto;
+  min-width: 300px;
   width: 20%;
   padding: 20px;
 }
@@ -44,4 +51,11 @@ main {
 
 .button-container button:hover {
   background-color: #8deba6;
+}
+
+#debug {
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  gap: 60px;
 }

@@ -47,6 +47,12 @@ function quickDebug() {
 
 //Calculate results and return
 function operate(operation, x, y) {
+  //If no operator exist
+  if (operation == "") {
+    reset();
+    return;
+  }
+
   // Prevent division by 0
   if (operation === "/" && y === 0) {
     alert("This operation is not allowed");
@@ -96,8 +102,11 @@ for (let i = 0; i < operatorButtons.length; i++) {
 //Add functionality to the equal button
 equalButton.addEventListener("click", () => {
   result = operate(operator, Number(num1), Number(num2));
+  if (operator != "") {
+    num1 = result;
+    num2 = "";
+  }
   num1 = result;
-  num2 = "";
   display.textContent = result;
 });
 
