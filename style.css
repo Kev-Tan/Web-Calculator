@@ -28,7 +28,7 @@ main {
   margin: 0 auto;
   min-width: 300px;
   width: 20%;
-  padding: 20px;
+  padding: 40px;
 }
 
 .display {
@@ -43,10 +43,12 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
+  margin-top: 60px;
 }
 
 .button-container button {
   border-radius: 10px;
+  padding: 5px;
 }
 
 .button-container button:hover {
@@ -58,4 +60,9 @@ main {
   margin-top: 20px;
   justify-content: center;
   gap: 60px;
+}
+
+#clear {
+  background-color: orange;
+  color: white;
 }
