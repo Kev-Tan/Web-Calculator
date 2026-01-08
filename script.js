@@ -4,6 +4,17 @@ let num2 = "";
 let operator = "";
 let result = "";
 
+let num1Debug = document.querySelector("#num1")
+let num2Debug = document.querySelector("#num2")
+let operatorDebug = document.querySelector("#operator")
+let debugRes = document.querySelector("#res")
+
+function quickDebug(){
+  console.log("Num1:", num1)
+  console.log("Num2:", num2)
+  console.log("Operator:", operator)
+}
+
 //Function
 function storeNumber(number) {
   if (num1 && !num2 && !operator && result) {
@@ -30,7 +41,10 @@ function reset() {
 }
 
 function storeOperator(operatorAdded) {
-  if (num1 && num2) {
+  console.log("Store opeator!")
+  console.log(`Num1:${num1}, Num2:${num2}`)
+  if (num1!=='' && num2!=='') {
+    console.log("Both numbers detected!")
     num1 = operate(operator, Number(num1), Number(num2));
     operator = operatorAdded;
     num2 = "";
@@ -42,6 +56,7 @@ function storeOperator(operatorAdded) {
 
 function quickDebug() {
   console.log(`Num 1: ${num1}`);
+  console.log(`Operator: ${operator}`)
   console.log(`Num 2: ${num2}`);
 }
 
@@ -58,23 +73,32 @@ function operate(operation, x, y) {
     alert("This operation is not allowed");
   }
 
+  quickDebug()
+
+  num1Debug.textContent = x;
+  operatorDebug.textContent = operation;
+  num2Debug.textContent = y;
+
   //Reset num2 and operator to default state since we store results in num1 variable
   num2 = "";
   operator = "";
+  let res = null;
   switch (operation) {
     case "+":
-      return x + y;
+      res = x + y;
       break;
     case "-":
-      return x - y;
+      res = x - y;
       break;
     case "*":
-      return x * y;
+      res = x * y;
       break;
     case "/":
-      return x / y;
+      res = x / y;
       break;
   }
+  debugRes.textContent = res
+  return res
 }
 
 //Get the buttons
