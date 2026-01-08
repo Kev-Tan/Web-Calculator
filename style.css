@@ -11,25 +11,44 @@ body {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 h1 {
-  font-family: "Georgia", serif;
+  margin-bottom: 30px;
+  font-family: "Yuji Boku", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 main {
   width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.main-container{
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  gap: 35px;
+  flex-wrap: wrap;
 }
 
 .container {
   background-color: #272b27;
   display: block;
-  margin: 0 auto;
-  min-width: 300px;
-  width: 20%;
-  padding: 40px;
+  /* margin-top: 20 px; */
+  padding: 45px;
+  max-height: 450px;
+  flex: 3 1 300px;
+  max-width: 400px;
 }
+
 
 .display {
   background-color: #999e99;
@@ -43,7 +62,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 
 .button-container button {
@@ -55,14 +74,43 @@ main {
   background-color: #8deba6;
 }
 
-#debug {
-  display: flex;
-  margin-top: 20px;
-  justify-content: center;
-  gap: 60px;
-}
-
 #clear {
   background-color: orange;
   color: white;
+}
+
+#debug {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border:1px solid black;
+  flex: 2 1 200px;
+  text-align: left;
+  width: 200px;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+#debug h3{
+  font-family: "Yuji Boku", serif;
+  font-weight: 400;
+  font-style: normal;
+  width: 100%;
+  margin:20px 0;
+}
+
+#debug ul{
+  width: 100%;
+}
+
+#debug li{
+  list-style-type: none;
+  margin: 10px 20px;
+  text-align: center;
+}
+
+@media (width <= 600px) {
+  .main-container{
+    width: 80%;
+  }
 }
